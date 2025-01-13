@@ -8,6 +8,7 @@ import 'package:t_store/common/widgets/list_tiles/user_profile_tile.dart';
 import 'package:t_store/common/widgets/texts/section_heading.dart';
 import 'package:t_store/data/repositories/authentication/authentication_repository.dart';
 import 'package:t_store/features/personalization/screens/address/address.dart';
+import 'package:t_store/features/personalization/screens/locations/store_location.dart';
 import 'package:t_store/features/personalization/screens/profile/profile.dart';
 import 'package:t_store/features/shop/controllers/settings_controller.dart';
 import 'package:t_store/features/shop/screens/cart/cart.dart';
@@ -84,10 +85,12 @@ class SettingsScreen extends StatelessWidget {
                   title: "Tài khoản của tôi",
                   subtitle: "Rút tiền về tài khoản ngân hàng đã đăng ký",
                 ),
-                const TSettingMenuTile(
-                  icon: Iconsax.discount_shape,
-                  title: "Mã giảm giá của tôi",
-                  subtitle: "Danh sách các mã giảm giá",
+                TSettingMenuTile(
+                  onTap: () => Get.to(() => const StoreLocationsScreen()),
+                  icon: Iconsax.location,
+                  title: "Địa chỉ các đại lý",
+                  subtitle: "Danh sách các đại lý gần bạn",
+                  
                 ),
                 const TSettingMenuTile(
                   icon: Iconsax.notification,
